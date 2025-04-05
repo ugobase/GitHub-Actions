@@ -1,0 +1,19 @@
+name: First action
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              
+            - name: hello worls
+              run: echo "hello world"
+
+            - name: List files
+              run: ls
+
+            - name: Read files
+              run: cat README.md
