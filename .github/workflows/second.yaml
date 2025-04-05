@@ -7,4 +7,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: shellscripting
-              run: ascii.sh
+              run: |
+               chmod +x ./ascii.sh
+               ./ascii.sh
