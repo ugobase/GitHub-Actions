@@ -18,8 +18,8 @@ jobs:
             - name: Install Cowsay And Generate Ascii
               run: |
                sudo apt install cowsay -y
-               cowsay -f snowman "Olaf is Here!!" >> snow.txt
-               grep -i "snow" snow.txt
+               cowsay -f dragon "The Dragon Queen!!" >> snow.txt
+               grep -i "dragon" snow.txt
                cat snow.txt
 
             # - name: Generate ASCII
