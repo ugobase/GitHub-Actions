@@ -1,0 +1,10 @@
+name: Shell action
+
+on: push
+
+jobs:
+    second-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: shellscripting
+              run: ascii.sh
