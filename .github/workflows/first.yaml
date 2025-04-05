@@ -9,13 +9,25 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: hello world
-              run: echo "hello world"
+            - name: List and Read Files
+              run: |
+                echo "hello world"
+                ls -ltra
+                cat README.md
 
-            - name: List files
-              run: ls
-            - name: List all files
-              run: ls -a
+            - name: Install Cowsay And Generate Ascii
+              run: |
+               sudo apt install cowsay -y
+               cowsay -f snowman.cow "Olaf is Here!!" >> snow.txt
+
+            # - name: Generate ASCII
+            #   run: cowsay -f snowman.cow "Olaf is Here!!" >> snow.txt
+
+            # - name: List files
+            #   run: ls
+
+            # - name: List all files
+            #   run: ls -a
         
 
             - name: Read files
