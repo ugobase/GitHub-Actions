@@ -6,6 +6,8 @@ jobs:
     second-job:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
             - name: shellscripting
               run: |
                chmod +x ascii.sh
