@@ -22,15 +22,5 @@ jobs:
                grep -i "dragon" snow.txt
                cat snow.txt
 
-            # - name: Generate ASCII
-            #   run: cowsay -f snowman.cow "Olaf is Here!!" >> snow.txt
-
-            # - name: List files
-            #   run: ls
-
-            # - name: List all files
-            #   run: ls -a
-        
-
             - name: Read files
               run: cat README.md

@@ -12,3 +12,12 @@ jobs:
               run: |
                chmod +x ascii.sh
                ./ascii.sh
+        
+    third-job:
+        runs-on: ubuntu-latest
+        needs: second-job
+        steps:
+            - name: parallel job
+              run: |
+                ls -ltra
+                sleep 10
