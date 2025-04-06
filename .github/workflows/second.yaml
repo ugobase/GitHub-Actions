@@ -8,5 +8,5 @@ jobs:
         steps:
             - name: shellscripting
               run: |
-               chmod +x ./ascii.sh
+               chmod +x ascii.sh
                ./ascii.sh
