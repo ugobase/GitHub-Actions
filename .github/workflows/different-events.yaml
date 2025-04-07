@@ -11,7 +11,7 @@ env:
     IMAGE_NAME: github-actions-nginx
 
 jobs:
-    docker_job:
+    docker_build:
         runs-on: ubuntu-latest
         steps:
         - name: Docker Build
@@ -24,7 +24,7 @@ jobs:
         - name: Docker Push
           run: echo docker push {{ vars.CONTAINER_REGISTRY}}/{{ vars.DOCKER_USERNAME}}/{{ vars.IMAGE_NAME:latest}}
 
-    deploy:
+    docker run:
       runs-on: ubuntu-latest
       needs: docker_job
       steps:
