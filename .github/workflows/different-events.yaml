@@ -1,7 +1,8 @@
 name: Events
 
 on: 
-  workflow_dispatch: 
+    push: 
+#   workflow_dispatch: 
 
     # schedule:
     # - cron: "*/1 * * * *"
@@ -31,6 +32,9 @@ jobs:
         group: production
         cancel-in-progress: true
 
+      timeout-minutes: 1
       steps:
       - name: Docker Run
-        run: echo docker run -d -p 8080:80 {{ vars.CONTAINER_REGISTRY}}/{{ vars.DOCKER_USERNAME}}/{{ vars.IMAGE_NAME:latest}}
+        run: | 
+            echo docker run -d -p 8080:80 {{ vars.CONTAINER_REGISTRY}}/{{ vars.DOCKER_USERNAME}}/{{ vars.IMAGE_NAME:latest}}
+            sleep 300s
